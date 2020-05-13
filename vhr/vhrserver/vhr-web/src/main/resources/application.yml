@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    rabbitmq:
+#      username: guest
+#      password: guest
+#      host: 192.168.91.128
+#      publisher-confirms: true
+#      publisher-returns: true
+#    redis:
+#      host: 192.168.91.128
+#      database: 0
+#      port: 6379
+#      password: 123
+#    cache:
+#      cache-names: menus_cache
+  flyway:
+    enabled: false
+server:
+  port: 8082
+logging:
+  level:
+    org.javaboy.vhr.mapper: debug
+fastdfs:
+  nginx:
+    host: http://192.168.91.128/
