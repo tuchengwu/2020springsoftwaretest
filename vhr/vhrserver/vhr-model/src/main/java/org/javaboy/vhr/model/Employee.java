@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 public class Employee implements Serializable {
     private Integer id;
@@ -382,5 +383,45 @@ public class Employee implements Serializable {
 
     public void setWorkAge(Integer workAge) {
         this.workAge = workAge;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) &&
+                Objects.equals(name, employee.name) &&
+                Objects.equals(gender, employee.gender) &&
+                Objects.equals(birthday, employee.birthday) &&
+                Objects.equals(idCard, employee.idCard) &&
+                Objects.equals(wedlock, employee.wedlock) &&
+                Objects.equals(nationId, employee.nationId) &&
+                Objects.equals(nativePlace, employee.nativePlace) &&
+                Objects.equals(politicId, employee.politicId) &&
+                Objects.equals(email, employee.email) &&
+                Objects.equals(phone, employee.phone) &&
+                Objects.equals(address, employee.address) &&
+                Objects.equals(departmentId, employee.departmentId) &&
+                Objects.equals(jobLevelId, employee.jobLevelId) &&
+                Objects.equals(posId, employee.posId) &&
+                Objects.equals(engageForm, employee.engageForm) &&
+                Objects.equals(tiptopDegree, employee.tiptopDegree) &&
+                Objects.equals(specialty, employee.specialty) &&
+                Objects.equals(school, employee.school) &&
+                Objects.equals(beginDate, employee.beginDate) &&
+                Objects.equals(workState, employee.workState) &&
+                Objects.equals(workID, employee.workID) &&
+                Objects.equals(contractTerm, employee.contractTerm) &&
+                Objects.equals(conversionTime, employee.conversionTime) &&
+                Objects.equals(notWorkDate, employee.notWorkDate) &&
+                Objects.equals(beginContract, employee.beginContract) &&
+                Objects.equals(endContract, employee.endContract) &&
+                Objects.equals(workAge, employee.workAge) ;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, email, phone, address, departmentId, jobLevelId, posId, engageForm, tiptopDegree, specialty, school, beginDate, workState, workID, contractTerm, conversionTime, notWorkDate, beginContract, endContract, workAge, nation, politicsstatus, department, jobLevel, position, salary);
     }
 }

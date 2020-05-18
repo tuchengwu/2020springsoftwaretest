@@ -185,7 +185,7 @@ public class SalaryServiceTest {
         ele5.setName("运维部工资账套");
         result=salaryService.updateSalaryById(ele5);
         Assert.assertEquals(0,result.intValue());
-        //测试用例6，记录主键不存在于数据库，且记录其余字段为空
+        //测试用例4，记录主键不存在于数据库，且记录其余字段为空
         Salary ele6=new Salary();
         ele6.setId(18);
         try{
